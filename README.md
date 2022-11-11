@@ -8,4 +8,4 @@
 
 备用镜像:
 - 镜像1
-[`zarttic.gitee.io/szlg-wlxh.github.io`](https://zarttic.gitee.io/szlg-wlxh.github.io/)
+[`zarttic.gitee.io/wlxh`](https://zarttic.gitee.io/wlxh/)
