@@ -1,0 +1,138 @@
+.table {
+    width: 100vw;
+    z-index: 9999;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    /* left: 0; */
+    display: flex;
+    /* background-color: #ffffff; */
+    /* box-shadow: 0 0 12px 0 gray; */
+    justify-content: center;
+}
+
+.table .actionButton {
+    min-width: 36px;
+    max-width: max-content;
+    height: 36px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.table .actionButton img {
+    width: 34px;
+    height: auto;
+}
+
+.table .actionButton:nth-of-type(-n+1) {
+    border: transparent;
+    background: none;
+}
+
+.table .actionButton:nth-of-type(1):hover {
+    background: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.actionButton {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 300px;
+    font-size: 16px;
+    height: 38px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.actionButton:hover {
+    background-image: url(../ResourceFile/send.svg);
+    background-size: contain;
+    color: transparent;
+}
+
+.actionButton:focus {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 300px;
+    margin-right: 0;
+}
+
+#headTable {
+    width: 80%;
+    min-width: 320px;
+    max-width: 1280px;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+#headTable .actionButton:hover{
+    -webkit-box-shadow:unset;
+    box-shadow:unset;
+}
+
+#backButton {
+    max-width: 160px;
+    width: max-content;
+    height: 100%;
+    /* position: absolute;
+    left: 0; */
+    min-width: max-content;
+    display: flex;
+}
+
+#backButton img {
+    width: 200%;
+    height: 40px;
+}
+
+#backButton .actionButton {
+    width: 160px;
+}
+
+.ContentMiddle {
+    justify-content: center;
+    width: 160px;
+    height: 100%;
+    display: flex;
+}
+
+#loginIndex {
+    height: 40px;
+}
+
+#loginIndex #headTable{
+    min-width:unset;
+    max-width:unset;
+    width:100%;
+}
+
+#indexTable {
+    background-color: #ffffff;
+}
+
+#fix {
+    width:160px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width:790px) {
+    .choose {
+        margin: 0%;
+    }
+}

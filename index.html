@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="./static/ResourceFile/favicon.ico" rel="shortcut icon"> -->
+    <link href="./static/favicon/favicon.ico" rel="icon">
+    <link href="./static/favicon/favicon-16x16.png" rel="icon " sizes="16x16">
+    <link href="./static/favicon/favicon-32x32.png" rel="icon " sizes="32x32">
+    <link href="./static/favicon/android-chrome-192x192.png" rel="icon" sizes="192x192">
+    <link href="./static/favicon/android-chrome-512x512.png" rel="icon" sizes="512x512">
+    <link href="./static/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="./static/JS/layui/css/layui.css">
+
+    <!-- <link href="./static/ResourceFile/touch-icon-ipad.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="./static/ResourceFile/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="./static/ResourceFile/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="144x144"> -->
+    <!-- 引入bootstrap.min.css -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- 引入jquery -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 引入boot.min.js -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* 轮播项 */
+        #myCarousel .carousel-inner>.item>img {
+            display: block;
+            width: 100%;
+            /* height: 500px; */
+        }
+
+        /* 侧边栏 */
+        .quick {
+            position: fixed;
+            bottom: 70px;
+            right: 0;
+            z-index: 99;
+        }
+
+        .quick a {
+            position: relative;
+            display: block;
+            width: 82px;
+            height: 90px;
+            margin-top: -1px;
+            /* background-color: #fff;
+            border: 1px solid #f5f5f5; */
+            text-align: center;
+        }
+
+        .quick .icon {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            margin: 0 auto 8px;
+            padding-top: 18px;
+        }
+
+        .icon img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+        }
+
+    </style>
+    <title>网络协会</title>
+    <link rel="stylesheet" type="text/css" href="./static/CSS/newFE.css">
+    <link rel="stylesheet" href="./static/CSS/general.css">
+    <link rel="stylesheet" href="./static/CSS/home.css">
+    <link rel="stylesheet" href="./static/CSS/headTable.css">
+</head>
+
+<body>
+<div class="table" id="indexTable Top">
+    <div id="headTable">
+        <div id="backButton" class="ContentMiddle">
+            <a href="http://justsit.edu.cn/" target="_blank" class="ContentMiddle">
+                <div id="fix">
+                    <img src="./static/favicon/logo.png" alt="江苏科技大学苏州理工学院" srcset="">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="big">
+    <div id="hovertreecontainer">
+        <div>
+            <h1 id="h1">JUST-NC</h1>
+            <p id="fake">江苏科技大学(张家港校区)、 苏州理工学院</p>
+            <h1 id="h2">网络协会欢迎您</h1>
+            <a class="hvr-bounce-to-right leftbutton" onclick="not_time()">报名</a>
+            <div class="cont">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
+</div>
+<script>
+    var fake = document.getElementById('fake');
+    var timed = setInterval(function () {
+        fake.style.opacity = '1';
+    }, 2000);
+</script>
+
+<h3>网络协会介绍</h3>
+<div class="container" id="block_1">
+    <div class="cow">
+        <div id="myCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="./static/favicon/activity-1.jpg" alt="First slide">
+                </div>
+                <div class="item">
+                    <img src="./static/favicon/activity-2.jpg" alt="Second slide">
+                </div>
+                <div class="item">
+                    <img src="./static/favicon/activity-3.jpg" alt="Third slide">
+                </div>
+                <div class="item">
+                    <img src="./static/favicon/activity-4.jpg" alt="Fourth slide">
+                </div>
+                <div class="item">
+                    <img src="./static/favicon/activity-5.jpg" alt="Fifth slide">
+                </div>
+                <div class="item">
+                    <img src="./static/favicon/activity-6.jpg" alt="Sixth slide">
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="page">
+            <h4><strong>网络协会的创立</strong></h4>
+            <p>网络协会是江苏科技大学（张家港校区）及苏州理工学院于 2007 年创立的一个以计算机为主要方向的协会，位于张家港校区河西教学区 H 楼，拥有舒适宽敞整洁的学习环境。
+            </p>
+            <h4><strong>网络协会的情况</strong> </h4>
+            <p>网络协会有完备健全的培养方案，以“软件with硬件”的学习为切入点，通过pair、任务卡、项目、技术交流会议等各种方式来培养协会成员的学习习惯、学习兴趣、学习热情，成立 16 年以来向全国各地各类相关公司企业输送了百余名人才。
+            </p>
+            <h4><strong>网络协会的学习方法</strong> </h4>
+            <p>在平日的学习里，我们追求更丰富有趣的学习方法，不定期的pair、checklist任务卡、包括但不限于知识的分享活动以及showcase模拟等形式，在促进提升我们代码水平的同时也提升了我们的综合能力，快乐学习，编程也可以变得很有趣~
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container" id="block_2">
+    <h4>小组介绍</h4>
+    <div class="cow" id="all_card">
+        <div class="card col-xs-6 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0 col-lg-2 col-lg-offset-2">
+            <div>
+                <div class="img">
+                    <img src="./static/favicon/软件组.png" alt="软件组">
+                </div>
+                <p>软件组</p>
+            </div>
+        </div>
+        <div class="card col-xs-6 col-sm-5 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-2 col-lg-offset-0">
+            <div>
+                <div class="img">
+                    <img src="./static/favicon/硬件组.png" alt="硬件组">
+                </div>
+                <p>硬件组</p>
+            </div>
+        </div>
+        <div class="card col-xs-6 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0 col-lg-2 col-lg-offset-0">
+            <div>
+                <div class="img">
+                    <img src="./static/favicon/网络组.png" alt="网络组">
+                </div>
+                <p>网络组</p>
+            </div>
+        </div>
+        <div class="card col-xs-6 col-sm-5 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-2 col-lg-offset-0">
+            <div>
+                <div class="img">
+                    <img src="./static/favicon/会议组.png" alt="会议组">
+                </div>
+                <p>会议组</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="web" id="web">
+    <div class="head">
+        <h2>
+            关于网络协会
+        </h2>
+        <p>
+            网络协会由软件组、硬件组、网络组和会议组构成，主要任务：维修全校设备，保障教室使用，钻研电脑知识，排除硬件问题，学习软硬技术，坚持全面发展。
+        </p>
+    </div>
+    <div class="container">
+        <div class="box1">
+            <div class="htm">
+                <div class="htm-pic" id="left">
+                    <img src="./static/favicon/软件组.jpg" class="img-responsive">
+                    <div class="hidden1" id="left1">
+                        <div class="white-border"></div>
+                        <p>
+                            软件组主要任务：</br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软件组负责学习并实践 Web 应用的前端内置后端的开发，进行网站平台建设方面的讨论，协助学校有需求的部门进行相关开发。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="css">
+                <div class="htm-pic" id="right">
+                    <img src="./static/favicon/硬件组.jpg" alt="硬件组" class="img-responsive">
+                    <div class="hidden1" id="right1">
+                        <div class="white-border"></div>
+                        <p>
+                            硬件组主要任务：</br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;负责学校教室所有多媒体设备，监督、检查并解决运行中暴露出的硬件问题，并且能够熟练掌握基本的计算机组装技能以及各类多媒体设备所涉及的各方面。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box1">
+            <div class="htm">
+                <div class="htm-pic" id="left">
+                    <img src="./static/favicon/网络组.jpg" alt="网络组" class="img-responsive">
+                    <div class="hidden1" id="left1">
+                        <div class="white-border"></div>
+                        <p>
+                            网络组主要任务：</br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;负责学校的教室以及宿舍内有线无线网络问题的解决。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="css">
+                <div class="htm-pic" id="right">
+                    <img src="./static/favicon/会议组.jpg" class="img-responsive">
+                    <div class="hidden1" id="right1">
+                        <div class="white-border"></div>
+                        <p>
+                            会议组主要任务：</br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;负责校园内所有会议场合及活动演出时设备和电子屏幕活动的正常运行，以确保在会议进行中不出现设备问题，在平时进行设备运维，执行老师及学校领导下发的各项任务。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 侧边栏代码 -->
+<div class="quick">
+    <a href="/register">
+        <div class="icon">
+            <img src="./static/favicon/报名.png" alt="在线报名">
+        </div>
+    </a>
+    <a href="#Top" class="goTop">
+        <div class="icon">
+            <img src="./static/favicon/返回首页.png" alt="返回首页">
+        </div>
+    </a>
+</div>
+
+<script>
+    var goTop = document.querySelector('.goTop')
+    document.addEventListener('scroll', function() {
+        console.log(window.pageYOffset);
+        if (window.pageYOffset >= 900) {
+            goTop.style.display = 'block'
+        } else {
+            goTop.style.display = 'none'
+        }
+    })
+</script>
+<script src="./static/JS/layui/layui.js"></script>
+<script type="text/javascript" src="./static/JS/cavan.js"></script>
+<script type="text/javascript" src="./static/JS/cavans.js"></script>
+
+
+<center style="padding: 0;margin:0;list-style: none">
+    <br>
+    <br>
+    <br>
+    <span style="font-family:arial;">Copyright © 2022 网络协会  &nbsp;&nbsp; </span>
+    <img src="https://mbdp01.bdstatic.com/static/landing-pc/img/icon_police.7296bdfd.png">
+    <a>   苏ICP备2022001829号</a>
+</center>
+</body>
+</html>
+<script>
+    function not_time(){
+layer.open({
+  title: '出错辣',
+content: '现在还不是报名时间,进入咨询群来获取信息',
+time:'1000',
+anim:'1',
+skin: 'layui-layer-lan',
+icon:'6',
+closeBtn: 2
+});
+    }
+</script>

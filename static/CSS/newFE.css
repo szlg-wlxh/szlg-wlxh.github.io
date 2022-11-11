@@ -1,0 +1,217 @@
+.head h2 {
+    padding: 10px 0;
+    color: #333;
+    font-size: 50px;
+}
+
+.head p {
+    padding: 10px 0;
+}
+
+.web {
+    position: relative;
+}
+
+.head {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.container img {
+    width: auto;
+    height: auto;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.htm {
+    width: 400px;
+    display: inline;
+    margin: 0;
+}
+
+.htm-pic {
+    display: inline-block;
+    margin: 0 50px;
+    width: 320px;
+    height: 320px;
+}
+
+.hidden1 {
+    background-color: #f61947;
+    z-index: 1;
+    opacity: 0;
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 0%;
+}
+
+.white-border {
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px white solid;
+}
+
+.htm-pic:hover .hidden1 {
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.css {
+    width: 400px;
+    display: inline;
+    margin: 0;
+}
+
+.js {
+    width: 400px;
+    display: inline;
+    margin: 0;
+}
+
+.es6 {
+    width: 400px;
+    display: inline;
+    margin: 0;
+}
+
+.react {
+    width: 400px;
+    display: inline;
+    margin: 0;
+}
+
+.vue {
+    width: 400px;
+    display: inline;
+    margin: 0;
+}
+
+.hidden1 p {
+    color: white;
+    width: 250px;
+    margin: 40px;
+}
+
+.box1 {
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+.box2 {
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+.box3 {
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+@media screen and (max-width:1000px) {
+    .head h2{
+        font-size: 30px;
+    }
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .htm-pic {
+        margin: 0 auto;
+    }
+    .htm {
+        width: 320px;
+        margin: 0;
+    }
+    .css {
+        width: 320px;
+        margin: 0 ;
+    }
+    .box1 {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        margin: 0px auto;
+    }
+    .box2 {
+        display:none;
+    }
+    .box3 {
+        display: none;
+    }
+    #left1 {
+        top: 0%;
+    }
+    #right1 {
+        top: 50%;
+    }
+    #left:hover #left1 {
+        opacity: 1;
+        transition: 0.4s;
+    }
+    #right:hover #right1 {
+        opacity: 1;
+        transition: 0.4s;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .head p {
+        font-size: 20px;
+    }
+    .htm {
+        width: 480px;
+    }
+    .htm-pic {
+        margin: 0;
+        width: 480px;
+        height: 480px;
+    }
+    .hidden1 {
+        width: 480px;
+        height: 480px;
+    }
+    .white-border {
+        width: 420px;
+        height: 420px;
+    }
+    .css {
+        width: 480px;
+    }
+    .js {
+        width: 480px;
+    }
+    .es6 {
+        width: 480px;
+    }
+    .react {
+        width: 480px;
+    }
+    .vue {
+        width: 480px;
+    }
+    .hidden1 p {
+        width: 375px;
+        margin: 60px;
+        font-size: 20px;
+    }
+    .container img {
+        width: 480px;
+        height: 480px;
+    }
+}

@@ -1,0 +1,266 @@
+html,
+.Login,
+.label {
+    width: 100%;
+    font-size: 14px;
+    margin: 0;
+    border: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 160%;
+    font-weight: 200;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    margin: 0;
+    /* background: #ffffff; */
+    background-image: url(../favicon/background.jpg);
+}
+
+.Login {
+    max-width: 640px;
+    width: 100%;
+    padding: 24px;
+    margin: 120px auto 0px;
+    height: auto;
+    display: flex;
+    position: relative;
+    /* -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);  */
+    background: rgba(0,0,0,.2);
+    border-radius: 15px;
+    flex-direction: unset;
+    flex-shrink: 0;
+    flex-direction: column;
+    /*background-color: #fff;        */
+}
+
+.label {
+    margin: 4px 0;
+    padding: 3px 0;
+    position: relative;
+    height: 84px;
+    min-height: unset;
+}
+
+label {
+    margin: 6px 0;
+    padding: 3px 0;
+    position: relative;
+}
+
+.img {
+    width: 100%;
+    position: absolute;
+    bottom: 100%;
+    font-size: 20px;
+    color: #f61947;
+}
+
+.img i {
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+}
+
+.posttitle {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 300px;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    background-color: #f61947;
+}
+
+.spaceBetween {
+    display: flex;
+    width: 50%;
+    min-width: 320px;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container {
+    justify-content: center;
+}
+
+input {
+    border: unset;
+    border-bottom: 0.1rem solid #000000;
+    background-color: transparent;
+    width: 300px;
+    height: 26px;
+    font-size: 18px;
+    transition: all 0.2s linear;
+}
+
+.showInformation {
+    width: 100%;
+    height: 24px;
+    visibility: hidden;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus+.showInformation {
+    visibility: visible;
+}
+
+.inputNotEmpty+.showInformation {
+    visibility: visible;
+}
+
+form {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+input:valid :nth-child(-1+1n) {
+    border-color: green;
+    background-image: url(../ResourceFile/complete.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid+.showInformation {
+    visibility: hidden;
+    font-size: 0;
+    background-image: url(../ResourceFile/complete.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+input:invalid+.showInformation {
+    color: red;
+}
+
+.actionButton {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 300px;
+    font-size: 16px;
+    height: 38px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    color: #f61947;
+    /* background-color: #f61947; */
+    transition: all 0.3s linear;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #f61947;
+    z-index: 10;
+}
+
+.animationButton {
+    position: relative;
+}
+
+.actionButton:hover {
+    -webkit-box-shadow: 4px 5px 6px rgba(0, 0, 0, .2);
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, .2);
+}
+
+.animationButton::after {
+    content: "";
+    width: 0;
+    height: 60%;
+    position: absolute;
+    z-index: 9;
+    top: 20%;
+    left: 0;
+    background-color: #f61947;
+    transition: width ease-out 0.5s;
+}
+
+.animationButton:hover::after {
+    width: 100%;
+}
+
+.actionButton:hover {
+    background-image: url(../ResourceFile/send.svg);
+    color: transparent;
+    font-size: 0;
+}
+
+.actionButton:focus {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 300px;
+    margin-right: 0;
+}
+
+select {
+    border-bottom: 0.1rem solid #f61947;   /* 下划线效果 */
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    /* border: unset; */
+    /* border-bottom: 0.1rem solid #000000; */
+    background-color: transparent;
+    width: 300px;
+    height: 26px;
+    font-size: 14px; 
+    transition: all 0.2s linear;
+}
+
+select:focus {
+    outline: none;
+}
+
+select:focus+.showInformation {
+    visibility: visible;
+}
+
+.selectNotEmpty+.showInformation {
+    visibility: visible;
+}
+
+select {
+    text-align: center;
+    text-align-last: center;
+}
+
+@media screen and (max-width:720px) {
+    .Login {
+        max-width: 308px;
+    }
+    #formBugFix {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .Login {
+        padding: 24px 6px;
+    }
+}
